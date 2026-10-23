@@ -2,191 +2,108 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Currículum · David Rodríguez</title>
+<title>David Rodríguez - Currículum</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 @page{size:A4;margin:0}
-:root{--accent:#0e5a66;--ink:#14191d;--text:#262d33;--muted:#4a545b;--line:#d3d9dc;--chip:#eef2f3}
 *{box-sizing:border-box}
 html,body{margin:0;background:#fff}
-body{font-family:'IBM Plex Sans','Helvetica Neue',Helvetica,sans-serif;color:var(--text);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'IBM Plex Sans',Arial,Helvetica,sans-serif;color:#1d2328;font-size:12.6px;line-height:1.45}
+.page{width:210mm;min-height:297mm;padding:15mm 17mm 13mm}
 a{color:inherit;text-decoration:none}
-.page{width:210mm;height:297mm;display:flex;flex-direction:column;overflow:hidden}
-.bar{height:6px;background:var(--accent);flex-shrink:0}
-header{display:flex;gap:22px;align-items:center;padding:30px 48px 16px}
-header .qr{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:4px;font:500 9px 'IBM Plex Mono',monospace;color:var(--muted)}
-header .qr img{width:62px;height:62px;border-radius:0}
-header img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0}
-h1{margin:0;font-size:31px;line-height:1.05;font-weight:700;letter-spacing:-0.01em;color:var(--ink)}
-.role{font-size:14.5px;font-weight:500;color:var(--accent);margin-top:5px}
-.contact{display:flex;flex-wrap:wrap;gap:3px 16px;margin-top:8px;font-size:12px;color:#3a434a}
-.contact span{display:flex;align-items:center;gap:5px}
-.contact svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-h2{display:flex;align-items:center;gap:10px;margin:0;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-h2::after{content:"";flex-grow:1;height:1px;background:var(--line)}
-.profile{padding:0 48px;margin-bottom:16px}
-.profile p{margin:7px 0 0;font-size:12.5px;line-height:1.5}
-.cols{display:flex;gap:30px;padding:0 48px;flex-grow:1;padding-bottom:28px}
-main{flex-grow:1;min-width:0;display:flex;flex-direction:column;gap:15px}
-aside{width:198px;flex-shrink:0;display:flex;flex-direction:column;gap:15px}
-section{display:flex;flex-direction:column;gap:8px}
-.item{display:flex;flex-direction:column;gap:1px}
-.row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-h3{margin:0;font-size:13.5px;font-weight:600;color:var(--ink)}
-.when{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:var(--muted);white-space:nowrap}
-.where{font-size:12px;font-weight:500;color:var(--accent)}
-ul{margin:3px 0 0;padding-left:14px;font-size:11.8px;line-height:1.42}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-bottom:10px;border-bottom:2px solid #0e5a66}
+h1{margin:0;font-size:27px;line-height:1.1;font-weight:700;color:#11171b}
+.title{margin-top:3px;font-size:15px;font-weight:600;color:#0e5a66}
+.contact{margin-top:7px;font-size:12px;color:#333b41;line-height:1.55}
+header img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex-shrink:0}
+h2{margin:15px 0 6px;font-size:13.5px;font-weight:700;color:#0e5a66;text-transform:uppercase;border-bottom:1px solid #cfd8db;padding-bottom:3px}
+p{margin:0}
+.job{margin-top:8px}
+.job:first-of-type{margin-top:0}
+.head{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+h3{margin:0;font-size:13.2px;font-weight:700;color:#11171b}
+.date{font-size:12px;color:#4a545b;white-space:nowrap}
+.org{font-size:12.4px;color:#333b41}
+ul{margin:3px 0 0;padding-left:16px}
 li{margin:0 0 2px}
-li::marker{color:#7d878d}
-.proj p{margin:1px 0 0;font-size:11.8px;line-height:1.42}
-.tech{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-top:1px}
-.other{display:flex;flex-direction:column;gap:3px;font-size:12px}
-.other strong{font-weight:600;color:var(--ink)}
-.group{display:flex;flex-direction:column;gap:5px}
-.group .t{font-size:12px;font-weight:600;color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:4px;font-size:10.8px;color:#1f272c}
-.chips span{padding:2px 6px;background:var(--chip);border-radius:4px}
-.small{font-size:12px;line-height:1.45}
-.small b{font-weight:600;color:var(--ink)}
-.kv{display:flex;justify-content:space-between;font-size:12px}
-.kv span:last-child{color:var(--muted)}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.facts div{background:var(--chip);border-radius:6px;padding:6px 7px}
-.facts b{display:block;font-size:15px;color:var(--accent);line-height:1.1}
-.facts span{font-size:9.6px;color:var(--muted);line-height:1.25;display:block;margin-top:2px}
+.line{display:flex;justify-content:space-between;gap:12px;margin-top:3px}
+.skills p{margin-top:3px}
+.skills b,.line b{font-weight:600;color:#11171b}
 </style>
 </head>
 <body>
 <div class="page">
-<div class="bar"></div>
 
 <header>
-  <img src="img/david.jpg" alt="Foto de David Rodríguez">
   <div>
     <h1>David Rodríguez</h1>
-    <div class="role">Técnico informático · Sistemas, soporte IT, desarrollo web y automatización</div>
+    <div class="title">Técnico de Sistemas y Soporte IT</div>
     <div class="contact">
-      <span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+34638424835">+34 638 42 48 35</a></span>
-      <span><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:dr4389742@gmail.com">dr4389742@gmail.com</a></span>
-      <span><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Coslada, Madrid</span>
-      <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://queren05.github.io/">queren05.github.io</a></span>
-      <span><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://www.linkedin.com/in/david-rodr%C3%ADguez-querencia-8b1255251">LinkedIn</a></span>
+      Coslada (Madrid) | +34 638 42 48 35 | dr4389742@gmail.com<br>
+      linkedin.com/in/david-rodríguez-querencia-8b1255251 | queren05.github.io
     </div>
   </div>
-  <div class="qr"><img src="img/qr.svg" alt="Código QR a mi web">mi web</div>
+  <img src="img/david.jpg" alt="David Rodríguez">
 </header>
 
-<div class="profile">
-  <h2>Perfil</h2>
-  <p>Técnico en Sistemas Microinformáticos y Redes con prácticas de soporte IT en centros educativos (Kit Digital) y en Decogas, donde rehíce desde cero la web de la empresa, hoy en producción, y monté automatizaciones con n8n que publican solas en Instagram. Por mi cuenta desarrollo apps nativas para iPhone, un juego para Android en Google Play y administro un servidor Linux con 34 servicios en Docker. Resolutivo, autónomo y con ganas de aprender; trabajo apoyándome en IA (Claude Code) para sacar proyectos completos rápido.</p>
+<h2>Perfil</h2>
+<p>Técnico en Sistemas Microinformáticos y Redes con experiencia en soporte a usuarios, mantenimiento de equipos y desarrollo web. En Decogas hice la nueva web de la empresa, que está en producción, y automaticé la publicación de sus productos en Instagram. En casa administro un servidor Linux con Docker. Incorporación inmediata, carné B y coche propio.</p>
+
+<h2>Experiencia profesional</h2>
+
+<div class="job">
+  <div class="head"><h3>Técnico informático</h3><span class="date">07/2026 - 10/2026 y 02/2025 - 11/2025</span></div>
+  <div class="org">Decogas (Instaladores Decogas SL), Coslada</div>
+  <ul>
+    <li>Desarrollé la web corporativa decogas.es con Astro, JavaScript y Supabase: catálogo, formulario de contacto con panel de administración y calculadora de presupuestos.</li>
+    <li>Migré la web anterior en WordPress (258 productos y 177 artículos) sin perder posicionamiento en Google.</li>
+    <li>Automaticé con n8n la publicación de productos en Instagram y gestioné campañas de Google Ads.</li>
+    <li>Mantenimiento de equipos y software, soporte a usuarios, atención al cliente y facturación.</li>
+  </ul>
 </div>
 
-<div class="cols">
-<main>
-
-<section>
-  <h2>Experiencia en IT</h2>
-  <div class="item">
-    <div class="row"><h3>Técnico IT, web y automatización</h3><span class="when">feb–nov 2025 · jul–oct 2026</span></div>
-    <div class="where">Decogas (Instaladores Decogas SL) · Coslada · recontratado en 2026</div>
-    <ul>
-      <li>Web corporativa desde cero (<b>decogas.es</b>) con Astro, JavaScript y Supabase: catálogo, gestión de clientes, panel de administración y seguridad por filas.</li>
-      <li>Migración de la web antigua (WordPress): 258 productos, 177 artículos de blog y 542 imágenes, sin perder posicionamiento. SEO con datos estructurados y analítica propia.</li>
-      <li>Calculadora de presupuestos con envío por WhatsApp y PDF. Publicación automática con GitHub Actions.</li>
-      <li>Automatizaciones con n8n y la API de Instagram (carteles de producto generados solos), campañas de Google Ads y redes sociales.</li>
-      <li>Mantenimiento de equipos y software, atención al cliente, ventas y facturación.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="row"><h3>Técnico de soporte IT (prácticas) · sector educativo</h3><span class="when">sept 2024 – ene 2025</span></div>
-    <div class="where">Tecnisolutions Gestión de Sistemas TIC · Kit Digital en colegios e institutos</div>
-    <ul>
-      <li>Montaje, despliegue y gestión de Chromebooks para los centros educativos.</li>
-      <li>Soporte in situ y resolución de incidencias: ordenadores, periféricos, proyectores y equipos del aula.</li>
-      <li>Atención a docentes y personal del centro.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Proyectos personales</h2>
-  <div class="item proj">
-    <div class="row"><h3>Servidor doméstico (homelab)</h3><span class="when">Linux · Docker</span></div>
-    <p>Debian 13 administrado por SSH con 34 contenedores (Jellyfin, Immich, Nextcloud, AdGuard, Netdata, n8n). Acceso remoto con Tailscale y Cloudflare Tunnel sin abrir puertos, servicios propios con systemd y copias de seguridad.</p>
-  </div>
-  <div class="item proj">
-    <div class="row"><h3>Caudal · app de finanzas</h3><span class="when">iPhone · Android</span></div>
-    <p>App nativa en Swift/SwiftUI con widgets que se sincronizan con mi servidor y gastos que se apuntan solos con Apple Pay. Versión Android en Kotlin/Compose para Google Play. Compilación automática con GitHub Actions.</p>
-  </div>
-  <div class="item proj">
-    <div class="row"><h3>Rumbo · organizador personal con IA</h3><span class="when">iPhone</span></div>
-    <p>Tareas, agenda, notas y cine con la API de Claude. Conectada a Jellyfin y con notas de IMDb, Letterboxd y Rotten Tomatoes.</p>
-  </div>
-  <div class="item proj">
-    <div class="row"><h3>Shrimp Zombies · juego 3D</h3><span class="when">Godot · Android</span></div>
-    <p>Shooter de zombis con modo historia de 4 misiones y modo por oleadas, en prueba cerrada en Google Play. Subida automatizada con la API de Google Play.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Otra experiencia</h2>
-  <div class="other">
-    <div class="row"><span><strong>Preparador de pedidos</strong> · Kuehne+Nagel, logística para Indra</span><span class="when">mar – jul 2026</span></div>
-    <div class="row"><span><strong>Repartidor</strong> · JOM Last Mile (subcontrata de Amazon)</span><span class="when">2025</span></div>
-    <div class="row"><span><strong>Operaciones logísticas</strong> · UPS</span><span class="when">2024</span></div>
-  </div>
-</section>
-
-</main>
-
-<aside>
-
-<section>
-  <h2>En cifras</h2>
-  <div class="facts">
-    <div><b>177</b><span>artículos SEO migrados</span></div>
-    <div><b>34</b><span>servicios en Docker</span></div>
-    <div><b>2</b><span>apps nativas de iPhone</span></div>
-    <div><b>1</b><span>juego en Google Play</span></div>
-  </div>
-</section>
-
-<section>
-  <h2>Habilidades</h2>
-  <div class="group">
-    <div class="t">Sistemas y redes</div>
-    <div class="chips"><span>Windows</span><span>Linux (Debian)</span><span>Docker</span><span>SSH</span><span>systemd</span><span>Tailscale</span><span>Cloudflare</span><span>Redes LAN / Wi-Fi</span><span>DNS</span><span>Montaje y reparación de PCs</span><span>Chromebooks</span><span>Incidencias</span></div>
-  </div>
-  <div class="group">
-    <div class="t">Desarrollo</div>
-    <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Astro</span><span>Supabase</span><span>SQL</span><span>Swift / SwiftUI</span><span>Kotlin</span><span>Python</span><span>Godot</span><span>Git</span><span>SEO</span></div>
-  </div>
-  <div class="group">
-    <div class="t">Automatización e IA</div>
-    <div class="chips"><span>n8n</span><span>GitHub Actions</span><span>APIs REST</span><span>API de Claude</span><span>Claude Code</span><span>Google Ads</span></div>
-  </div>
-</section>
-
-<section>
-  <h2>Formación</h2>
-  <div class="small"><b>CFGM Sistemas Microinformáticos y Redes</b><br><span style="color:var(--muted)">IES Rey Fernando VI · 2022 – 2024</span></div>
-</section>
-
-<section>
-  <h2>Idiomas</h2>
-  <div class="kv"><span>Español</span><span>Nativo</span></div>
-  <div class="kv"><span>Inglés</span><span>B2</span></div>
-</section>
-
-<section>
-  <h2>Disponibilidad</h2>
-  <div class="small"><b>Incorporación inmediata</b><br>Remoto, híbrido o presencial<br>Carné B y vehículo propio</div>
-</section>
-
-</aside>
+<div class="job">
+  <div class="head"><h3>Técnico de soporte IT (prácticas)</h3><span class="date">09/2024 - 01/2025</span></div>
+  <div class="org">Tecnisolutions Gestión de Sistemas TIC, Ajalvir</div>
+  <ul>
+    <li>Despliegue y configuración de Chromebooks en colegios e institutos dentro del programa Kit Digital.</li>
+    <li>Resolución de incidencias de hardware, software y red en los centros: ordenadores, periféricos y proyectores.</li>
+    <li>Atención a docentes y personal del centro.</li>
+  </ul>
 </div>
+
+<div class="job">
+  <div class="head"><h3>Preparador de pedidos</h3><span class="date">03/2026 - 07/2026</span></div>
+  <div class="org">Kuehne+Nagel (cliente Indra), Mejorada del Campo</div>
+</div>
+<div class="job">
+  <div class="head"><h3>Repartidor</h3><span class="date">2025</span></div>
+  <div class="org">JOM Last Mile (reparto para Amazon)</div>
+</div>
+<div class="job">
+  <div class="head"><h3>Operario de logística</h3><span class="date">2024</span></div>
+  <div class="org">UPS</div>
+</div>
+
+<h2>Formación</h2>
+<div class="line"><span><b>CFGM Sistemas Microinformáticos y Redes</b>, IES Rey Fernando VI</span><span class="date">2022 - 2024</span></div>
+
+<h2>Proyectos</h2>
+<ul>
+  <li><b>Servidor doméstico:</b> Debian 13 con más de 30 servicios en Docker, administrado por SSH, con acceso remoto por VPN (Tailscale) y Cloudflare Tunnel y copias de seguridad automáticas.</li>
+  <li><b>Apps y juegos:</b> dos apps para iPhone, una versión para Android y un juego en Godot en prueba cerrada en Google Play. Capturas en queren05.github.io.</li>
+</ul>
+
+<h2>Habilidades</h2>
+<div class="skills">
+  <p><b>Sistemas y redes:</b> Windows, Linux (Debian), Docker, SSH, redes LAN y Wi-Fi, TCP/IP, DNS, VPN, montaje y reparación de PC, Chromebooks, soporte a usuarios.</p>
+  <p><b>Desarrollo web:</b> HTML, CSS, JavaScript, Astro, Supabase, SQL, Git y GitHub, SEO.</p>
+  <p><b>Automatización:</b> n8n, GitHub Actions, Google Ads.</p>
+  <p><b>Idiomas:</b> español nativo, inglés B2.</p>
+</div>
+
 </div>
 </body>
 </html>
