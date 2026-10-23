@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>David Rodríguez</title>
+<meta name="description" content="David Rodríguez, técnico informático en Madrid: sistemas y soporte IT, desarrollo web y de apps, y automatización. Disponible ya.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="David Rodríguez · Técnico informático">
+<meta property="og:description" content="Sistemas y soporte IT, desarrollo web y de apps, y automatización. Madrid · disponible ya.">
+<meta property="og:image" content="https://queren05.github.io/img/david.jpg">
+<meta property="og:url" content="https://queren05.github.io/">
+<link rel="canonical" href="https://queren05.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e5a66'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EDR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#f6f8f8; --surface:#ffffff; --ink:#151b1f; --muted:#4b565c; --line:#d6dee0;
+  --accent:#0e5a66; --accent-soft:#e2eff0; --frame:#e9eef0;
+  --cta-bg:#0e5a66; --cta-fg:#ffffff; --cta-btn:#0b4852; --cta-line:#4f8790;
+  --f-sans:'IBM Plex Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1517; --surface:#162024; --ink:#e6eef0; --muted:#a3b2b7; --line:#2a383d;
+  --accent:#5cc2cf; --accent-soft:#17343a; --frame:#1d2a2f;
+  --cta-bg:#17343a; --cta-fg:#e6eef0; --cta-btn:#0f2428; --cta-line:#2f5961; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1517; --surface:#162024; --ink:#e6eef0; --muted:#a3b2b7; --line:#2a383d;
+  --accent:#5cc2cf; --accent-soft:#17343a; --frame:#1d2a2f;
+  --cta-bg:#17343a; --cta-fg:#e6eef0; --cta-btn:#0f2428; --cta-line:#2f5961; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto;padding-block:48px 72px;display:flex;flex-direction:column;gap:88px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{color:var(--muted);text-decoration:none}
+.top nav a:hover{color:var(--accent)}
+.status{display:inline-flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#2f9e5a;box-shadow:0 0 0 3px color-mix(in srgb,#2f9e5a 25%,transparent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:center;margin-top:-40px}
+.hero img{width:168px;height:168px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.prompt{font-family:var(--f-mono);font-size:14px;color:var(--accent);margin-bottom:10px}
+.prompt span{color:var(--muted)}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-0.02em}
+.hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--muted);margin-top:10px;max-width:40ch}
+.hero .role b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-family:var(--f-mono);font-size:12.5px;padding:4px 10px;border-radius:6px;background:var(--accent-soft);color:var(--ink)}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.copy{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 var(--f-mono);padding:11px 14px;border-radius:8px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;user-select:all}
+.copy:hover{border-color:var(--accent)}
+.copy svg{width:15px;height:15px;stroke:var(--accent);flex-shrink:0}
+.copy.done{border-color:var(--accent);color:var(--accent)}
+
+/* sections */
+section{display:flex;flex-direction:column;gap:28px}
+.eyebrow{font-family:var(--f-mono);font-size:13px;color:var(--accent);letter-spacing:.02em}
+.sec-head{display:flex;flex-direction:column;gap:8px}
+.sec-head h2{font-size:clamp(28px,4vw,38px);font-weight:700;letter-spacing:-0.01em}
+.lede{font-size:18px;color:var(--muted);max-width:62ch}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:start}
+.about p{font-size:18px;max-width:60ch}
+.about p + p{margin-top:14px}
+.facts{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts dt{color:var(--muted);font-family:var(--f-mono);font-size:13px;padding-top:2px}
+.facts dd{margin:0;text-align:right;font-weight:500}
+
+/* projects */
+.projects{display:flex;flex-direction:column;gap:64px}
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:center}
+.project:nth-child(even) .shot{order:-1}
+.project h3{font-size:26px;font-weight:700}
+.project .kind{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-bottom:8px}
+.project p{margin-top:12px;color:var(--ink)}
+.project ul{margin:14px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.project li::marker{color:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.stack span{font-family:var(--f-mono);font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:5px;color:var(--muted)}
+
+/* screenshot frames */
+.shot{min-width:0}
+.browser{border-radius:12px;border:1px solid var(--line);background:var(--surface);overflow:hidden;box-shadow:0 18px 40px -24px rgba(10,40,48,.35)}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:var(--frame);border-bottom:1px solid var(--line)}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.browser .bar span{margin-left:10px;font:12px var(--f-mono);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.phones{display:flex;gap:18px;justify-content:center}
+.phone{width:min(210px,46%);aspect-ratio:9/19.5;border-radius:30px;border:8px solid var(--ink);background:var(--surface);overflow:hidden;max-width:100%}
+.terminal{border-radius:12px;background:#0d1417;color:#cfe3e6;font:13px/1.7 var(--f-mono);padding:18px 20px;border:1px solid var(--line);overflow-x:auto}
+.terminal .p{color:#5cc2cf}
+.terminal .c{color:#7d9298}
+.placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;
+  padding:20px;color:var(--muted);font:13px/1.45 var(--f-mono);
+  background:repeating-linear-gradient(135deg,transparent 0 10px,color-mix(in srgb,var(--line) 45%,transparent) 10px 11px)}
+.browser .placeholder{aspect-ratio:16/10}
+.phone .placeholder{height:100%}
+.placeholder svg{width:28px;height:28px;stroke:var(--accent);margin-bottom:4px}
+.shot img{display:block;width:100%;height:auto}
+
+/* experience */
+.timeline{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.job .when{font:500 14px var(--f-mono);color:var(--accent);padding-top:3px;font-variant-numeric:tabular-nums}
+.job h3{font-size:20px;font-weight:600}
+.job .where{color:var(--muted);margin-top:2px}
+.job ul{margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.job li::marker{color:var(--accent)}
+.job.minor h3{font-size:17px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.skill h3{font-size:16px;font-weight:600;margin-bottom:12px}
+.skill .chips{margin-top:0}
+.skill .chip{background:var(--surface);border:1px solid var(--line)}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.card h3{font-size:18px;font-weight:600}
+.card p{color:var(--muted);margin-top:4px}
+.lang{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
+.lang:last-child{border-bottom:0}
+
+/* contact */
+.contact{background:var(--cta-bg);color:var(--cta-fg);border-radius:16px;padding:44px clamp(22px,5vw,52px);display:flex;flex-direction:column;gap:18px}
+.contact h2{font-size:clamp(28px,4vw,40px)}
+.contact p{max-width:55ch;color:var(--cta-fg);opacity:.88;font-size:18px}
+.contact .copy{background:var(--cta-btn);border-color:var(--cta-line);color:var(--cta-fg)}
+.contact .copy svg{stroke:var(--cta-fg)}
+footer{font:13px var(--f-mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:-56px}
+
+@media (max-width:760px){
+  .wrap{gap:64px;padding-block:28px 56px}
+  .hero{grid-template-columns:1fr;gap:22px;margin-top:-24px}
+  .hero img{width:120px;height:120px}
+  .about,.project,.skills,.edu{grid-template-columns:1fr}
+  .project:nth-child(even) .shot{order:0}
+  .job{grid-template-columns:1fr;gap:6px}
+  .top nav{display:none}
+}
+@media (prefers-reduced-motion:no-preference){.copy,.top nav a{transition:border-color .15s,color .15s}}
+
+/* añadidos */
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--f-sans);padding:12px 16px;border-radius:8px;background:var(--accent);color:var(--surface);text-decoration:none;border:1px solid var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+.btn svg{width:16px;height:16px;stroke:currentColor}
+a.copy{text-decoration:none;user-select:auto}
+.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:-40px}
+.numbers div{padding:22px 18px 22px 0;display:flex;flex-direction:column;gap:6px}
+.numbers div + div{padding-left:18px;border-left:1px solid var(--line)}
+.numbers b{font:700 clamp(30px,4vw,40px)/1 var(--f-sans);color:var(--accent);letter-spacing:-0.02em}
+.numbers span{font-size:14px;color:var(--muted);line-height:1.4}
+.project .link{margin-top:16px;font:500 14px var(--f-mono)}
+.stackshots{display:flex;flex-direction:column;gap:14px}
+.stackshots .browser:nth-child(2){width:86%;margin-left:auto;margin-top:-56px;box-shadow:0 18px 40px -14px rgba(10,40,48,.5)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+.terminal div{white-space:pre}
+.terminal.flow div{white-space:normal}
+@media (max-width:760px){
+  .numbers{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:-24px}
+  .numbers div:nth-child(3){padding-left:0;border-left:0}
+  .numbers div:nth-child(n+3){border-top:1px solid var(--line)}
+  .stackshots .browser:nth-child(2){margin-top:-28px}
+  .terminal{font-size:12px}
+}
+@media print{.top nav,.contact-row .copy{display:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="status"><span class="dot" aria-hidden="true"></span>Disponible · incorporación inmediata</span>
+    <nav aria-label="Secciones">
+      <a href="#proyectos">proyectos</a><a href="#experiencia">experiencia</a><a href="#habilidades">habilidades</a><a href="#contacto">contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Presentación">
+    <img src="img/david.jpg" alt="Foto de David Rodríguez" width="168" height="168">
+    <div>
+      <div class="prompt">david@coslada<span>:~$</span> whoami</div>
+      <h1>David Rodríguez</h1>
+      <p class="role"><b>Técnico informático</b> en Madrid. Sistemas y soporte IT, desarrollo web y de apps, y automatización.</p>
+      <div class="chips">
+        <span class="chip">CFGM SMR</span><span class="chip">Remoto · híbrido · presencial</span><span class="chip">Carné B + coche</span><span class="chip">Inglés B2</span>
+      </div>
+      <div class="contact-row">
+        <a class="btn" href="CV-David-Rodriguez.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>Descargar CV (PDF)
+        </a>
+        <button class="copy" type="button" data-copy="dr4389742@gmail.com" aria-label="Copiar email dr4389742@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span>dr4389742@gmail.com</span>
+        </button>
+        <a class="copy" href="https://www.linkedin.com/in/david-rodr%C3%ADguez-querencia-8b1255251" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><span>LinkedIn</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers" aria-label="En cifras">
+    <div><b>177</b><span>artículos de blog migrados y optimizados para SEO</span></div>
+    <div><b>258</b><span>productos rescatados de la web antigua a Supabase</span></div>
+    <div><b>34</b><span>servicios en Docker en mi servidor</span></div>
+    <div><b>3</b><span>apps propias: 2 para iPhone y 1 juego en Google Play</span></div>
+  </section>
+
+  <section aria-labelledby="sobre">
+    <div class="sec-head"><span class="eyebrow">~/sobre-mi</span><h2 id="sobre">Sobre mí</h2></div>
+    <div class="about">
+      <div>
+        <p>Soy técnico en Sistemas Microinformáticos y Redes. He dado soporte IT en colegios e institutos con el Kit Digital y en Decogas rehíce desde cero su web, que hoy está en producción, y monté automatizaciones que publican solas en sus redes.</p>
+        <p>Fuera del trabajo sigo construyendo: dos apps nativas para iPhone, un juego para Android en prueba en Google Play y un servidor Linux en casa con más de 30 servicios. Me gusta entender cómo funcionan las cosas por dentro y dejarlas funcionando.</p>
+        <p>Programo apoyándome en IA (Claude Code). Yo decido qué se hace y cómo, pruebo en dispositivos reales, reviso y despliego. Eso me permite sacar proyectos completos en poco tiempo.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>ubicación</dt><dd>Coslada, Madrid</dd></div>
+        <div><dt>formación</dt><dd>CFGM Sistemas Microinformáticos y Redes</dd></div>
+        <div><dt>modalidad</dt><dd>Remoto, híbrido o presencial</dd></div>
+        <div><dt>movilidad</dt><dd>Carné B y vehículo propio</dd></div>
+        <div><dt>idiomas</dt><dd>Español nativo · Inglés B2</dd></div>
+        <div><dt>busco</dt><dd>Soporte IT, sistemas o desarrollo web</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="proyectos" aria-labelledby="proy">
+    <div class="sec-head"><span class="eyebrow">~/proyectos</span><h2 id="proy">Proyectos</h2>
+      <p class="lede">Cosas que he construido, en el trabajo y por mi cuenta. Todas funcionan y se usan.</p></div>
+    <div class="projects">
+
+      <article class="project">
+        <div>
+          <div class="kind">Decogas · web en producción</div>
+          <h3>decogas.es</h3>
+          <p>La web de una empresa instaladora de calderas y aire acondicionado de Madrid, rehecha desde cero y en producción.</p>
+          <ul>
+            <li>Catálogo y contactos de clientes sobre Supabase, con panel de administración y seguridad por filas (RLS).</li>
+            <li>Rescate de la tienda antigua (WordPress): 258 productos y 265 fotos migrados; 177 artículos del blog con 542 imágenes pasadas a WebP.</li>
+            <li>Calculadora que recomienda el equipo según la vivienda y envía el presupuesto por WhatsApp o PDF.</li>
+            <li>SEO técnico con datos estructurados (JSON-LD) y analítica propia para medir visitas y llamadas.</li>
+            <li>Cada cambio se publica solo con GitHub Actions.</li>
+          </ul>
+          <div class="stack"><span>Astro</span><span>JavaScript</span><span>Supabase</span><span>SEO</span><span>GitHub Actions</span></div>
+          <p class="link"><a href="https://decogas.es" target="_blank" rel="noopener">Ver decogas.es →</a></p>
+        </div>
+        <figure class="shot stackshots" style="margin:0">
+          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>decogas.es</span></div><img src="img/decogas-portada.jpg" alt="Portada de decogas.es" loading="lazy"></div>
+          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>decogas.es/calcula</span></div><img src="img/decogas-calculadora.jpg" alt="Calculadora de decogas.es" loading="lazy"></div>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="kind">Decogas · automatización</div>
+          <h3>Publicación automática en Instagram</h3>
+          <p>Un sistema que crea y publica solo los carteles de producto y el contenido del blog, sin trabajo manual cada día.</p>
+          <ul>
+            <li>Flujos de n8n que leen los productos de la misma base de datos que la web.</li>
+            <li>Generador de carteles propio (Node, Playwright y sharp) con recorte de fondo con IA.</li>
+            <li>Publicación por la API oficial de Instagram (Meta) y acceso seguro con Cloudflare Tunnel.</li>
+            <li>Todo en contenedores Docker en mi servidor.</li>
+          </ul>
+          <div class="stack"><span>n8n</span><span>Node.js</span><span>Playwright</span><span>Docker</span><span>API de Meta</span><span>Cloudflare</span></div>
+        </div>
+        <figure class="shot" style="margin:0">
+          <div class="terminal flow" role="img" aria-label="Esquema de la automatización">
+            <div><span class="c"># cómo funciona</span></div>
+            <div><span class="p">supabase</span> → productos y artículos</div>
+            <div>&nbsp;&nbsp;↓</div>
+            <div><span class="p">n8n</span> → elige qué publicar y cuándo</div>
+            <div>&nbsp;&nbsp;↓</div>
+            <div><span class="p">poster</span> → monta el cartel (Playwright + sharp)</div>
+            <div>&nbsp;&nbsp;↓</div>
+            <div><span class="p">instagram</span> → publica con la API de Meta</div>
+          </div>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="kind">Proyecto personal · iPhone y Android</div>
+          <h3>Caudal, app de finanzas</h3>
+          <p>Mi app para controlar el dinero: gastos, cuentas, inversiones y horas trabajadas. Nativa para iPhone y en camino a Google Play.</p>
+          <ul>
+            <li>iPhone en Swift/SwiftUI, con widgets y gastos que se apuntan solos al pagar con Apple Pay (Atajos).</li>
+            <li>Los widgets leen los datos de un servicio propio en mi servidor, por VPN (Tailscale).</li>
+            <li>Versión Android en Kotlin y Jetpack Compose, con copia de seguridad cifrada.</li>
+            <li>Cada cambio genera la app de iPhone y la de Android con GitHub Actions.</li>
+          </ul>
+          <div class="stack"><span>Swift</span><span>SwiftUI</span><span>Kotlin</span><span>Compose</span><span>GitHub Actions</span></div>
+        </div>
+        <figure class="shot" style="margin:0">
+          <div class="phones">
+            <div class="phone"><img src="img/caudal-apuntar.jpg" alt="Caudal: apuntar un gasto" loading="lazy"></div>
+            <div class="phone"><img src="img/caudal-personalizar.jpg" alt="Caudal: personalizar el inicio" loading="lazy"></div>
+          </div>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="kind">Proyecto personal · iPhone</div>
+          <h3>Rumbo, organizador personal con IA</h3>
+          <p>Tareas, agenda, notas, cine y hábitos en una sola app nativa, con un asistente de IA que resume el día.</p>
+          <ul>
+            <li>Integración con la API de Claude para el resumen diario y las preguntas sobre tus notas.</li>
+            <li>Conectada a mi servidor Jellyfin: sabe lo que veo y al terminar una película me pregunta qué me ha parecido.</li>
+            <li>Notas de IMDb, Letterboxd y Rotten Tomatoes en cada ficha.</li>
+            <li>Notificaciones, tareas en segundo plano y copia de seguridad automática en mi servidor.</li>
+          </ul>
+          <div class="stack"><span>Swift</span><span>SwiftUI</span><span>API de Claude</span><span>Jellyfin</span><span>REST</span></div>
+        </div>
+        <figure class="shot" style="margin:0">
+          <div class="phones">
+            <div class="phone"><img src="img/rumbo-hoy.jpg" alt="Rumbo: pantalla Hoy" loading="lazy"></div>
+            <div class="phone"><img src="img/rumbo-valoraciones.jpg" alt="Rumbo: valoraciones de una película" loading="lazy"></div>
+          </div>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="kind">Proyecto personal · juego para Android</div>
+          <h3>Shrimp Zombies</h3>
+          <p>Shooter de zombis en 3D hecho con Godot, en prueba cerrada en Google Play.</p>
+          <ul>
+            <li>Modo historia con 4 misiones, jefes finales, escoltas y documentos coleccionables, además de un modo por oleadas.</li>
+            <li>Más de 15 armas, mejoras, ventajas y varios mapas: cárcel, pueblo, fábrica y puerto.</li>
+            <li>Voces de radio generadas con un modelo de voz en local.</li>
+            <li>Compilación firmada y subida a Google Play automatizadas con su API.</li>
+          </ul>
+          <div class="stack"><span>Godot 4</span><span>GDScript</span><span>Android</span><span>Google Play</span></div>
+        </div>
+        <figure class="shot stackshots" style="margin:0">
+          <div class="browser"><img src="img/shrimp-carcel.jpg" alt="Shrimp Zombies: la cárcel" loading="lazy"></div>
+          <div class="browser"><img src="img/shrimp-pueblo.jpg" alt="Shrimp Zombies: el pueblo en llamas" loading="lazy"></div>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div>
+          <div class="kind">Proyecto personal · sistemas</div>
+          <h3>Servidor doméstico</h3>
+          <p>Un servidor con Debian 13 que administro solo por SSH y en el que todo corre en contenedores Docker.</p>
+          <ul>
+            <li>34 contenedores: Jellyfin, Immich (fotos), Nextcloud, AdGuard Home (DNS), Netdata (monitorización), n8n y más.</li>
+            <li>Acceso remoto seguro con Tailscale y Cloudflare Tunnel, sin abrir puertos al exterior.</li>
+            <li>Servicios propios con systemd: sincronización de los widgets y copias de seguridad de mis apps.</li>
+            <li>Diagnóstico de red: localicé un puerto LAN averiado en el router y monté la conexión por Wi-Fi.</li>
+          </ul>
+          <div class="stack"><span>Debian 13</span><span>Docker</span><span>SSH</span><span>systemd</span><span>Tailscale</span><span>Redes</span></div>
+        </div>
+        <figure class="shot" style="margin:0">
+          <div class="terminal" role="img" aria-label="Terminal del servidor">
+            <div><span class="p">david@servidor:~$</span> cat /etc/debian_version</div>
+            <div>13.6</div>
+            <div><span class="p">david@servidor:~$</span> docker ps --format '{{.Names}}  {{.Status}}' | head</div>
+            <div>jellyfin              Up 3 days</div>
+            <div>immich-server         Up 3 days (healthy)</div>
+            <div>nextcloud             Up 3 days</div>
+            <div>adguard-home          Up 3 days</div>
+            <div>netdata               Up 3 days (healthy)</div>
+            <div>n8n-decogas           Up 3 days</div>
+            <div>poster-decogas        Up 3 days</div>
+            <div>cloudflared-decogas   Up 3 days</div>
+            <div>tailscale             Up 3 days</div>
+            <div>homepage              Up 3 days (healthy)</div>
+            <div><span class="p">david@servidor:~$</span> docker ps -q | wc -l</div>
+            <div>34</div>
+          </div>
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experiencia" aria-labelledby="exp">
+    <div class="sec-head"><span class="eyebrow">~/experiencia</span><h2 id="exp">Experiencia</h2></div>
+    <div class="timeline">
+      <article class="job">
+        <div class="when">2025 · 2026</div>
+        <div>
+          <h3>Técnico IT, web y automatización</h3>
+          <div class="where">Decogas (Instaladores Decogas SL) · Coslada · feb – nov 2025 y, de nuevo, jul – oct 2026</div>
+          <ul>
+            <li>Web corporativa desde cero con catálogo, gestión de clientes, calculadora de presupuestos y blog de 177 artículos.</li>
+            <li>Migración de la web antigua sin perder contenido ni posicionamiento, y cambio de hosting a Nicalia.</li>
+            <li>Automatizaciones con n8n que publican solas en Instagram, campañas de Google Ads y redes sociales.</li>
+            <li>Mantenimiento de equipos y software, atención al cliente, ventas y facturación.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">2024 · 2025</div>
+        <div>
+          <h3>Técnico de soporte IT · sector educativo</h3>
+          <div class="where">Tecnisolutions Gestión de Sistemas TIC · sept 2024 – ene 2025 · Kit Digital en colegios e institutos</div>
+          <ul>
+            <li>Montaje, despliegue y gestión de Chromebooks para los centros.</li>
+            <li>Soporte in situ: ordenadores, periféricos, proyectores y equipos del aula.</li>
+            <li>Atención a docentes y personal del centro.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job minor"><div class="when">2026</div><div><h3>Preparador de pedidos</h3><div class="where">Kuehne+Nagel · logística para Indra · mar – jul 2026</div></div></article>
+      <article class="job minor"><div class="when">2025</div><div><h3>Repartidor</h3><div class="where">JOM Last Mile (subcontrata de Amazon)</div></div></article>
+      <article class="job minor"><div class="when">2024</div><div><h3>Operaciones logísticas</h3><div class="where">UPS</div></div></article>
+    </div>
+  </section>
+
+  <section id="habilidades" aria-labelledby="hab">
+    <div class="sec-head"><span class="eyebrow">~/habilidades</span><h2 id="hab">Habilidades</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Sistemas y redes</h3><div class="chips">
+        <span class="chip">Windows</span><span class="chip">Linux (Debian)</span><span class="chip">Docker</span><span class="chip">SSH</span><span class="chip">systemd</span><span class="chip">Tailscale (VPN)</span><span class="chip">Cloudflare</span><span class="chip">Redes LAN / Wi-Fi</span><span class="chip">DNS</span><span class="chip">Montaje y reparación de PCs</span><span class="chip">Chromebooks</span><span class="chip">Resolución de incidencias</span></div></div>
+      <div class="skill"><h3>Desarrollo</h3><div class="chips">
+        <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Astro</span><span class="chip">Supabase</span><span class="chip">SQL</span><span class="chip">Swift / SwiftUI</span><span class="chip">Kotlin</span><span class="chip">Python</span><span class="chip">Godot</span><span class="chip">Git</span><span class="chip">SEO</span></div></div>
+      <div class="skill"><h3>Automatización e IA</h3><div class="chips">
+        <span class="chip">n8n</span><span class="chip">GitHub Actions</span><span class="chip">APIs REST</span><span class="chip">API de Claude</span><span class="chip">Claude Code</span><span class="chip">Playwright</span><span class="chip">Google Ads</span><span class="chip">Redes sociales</span></div></div>
+    </div>
+    <div class="edu">
+      <div class="card"><h3>CFGM Sistemas Microinformáticos y Redes</h3><p>IES Rey Fernando VI · 2022 – 2024</p></div>
+      <div class="card"><div class="lang"><span>Español</span><b>Nativo</b></div><div class="lang"><span>Inglés</span><b>B2</b></div></div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact" aria-labelledby="con">
+    <h2 id="con">¿Hablamos?</h2>
+    <p>Busco puesto de soporte técnico, sistemas o desarrollo web. Puedo empezar ya.</p>
+    <div class="contact-row" style="margin-top:6px">
+      <button class="copy" type="button" data-copy="dr4389742@gmail.com" aria-label="Copiar email dr4389742@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span>dr4389742@gmail.com</span>
+      </button>
+      <button class="copy" type="button" data-copy="+34638424835" aria-label="Copiar teléfono +34 638 42 48 35">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>+34 638 42 48 35</span>
+      </button>
+      <a class="copy" href="CV-David-Rodriguez.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Currículum en PDF</span>
+      </a>
+      <a class="copy" href="https://www.linkedin.com/in/david-rodr%C3%ADguez-querencia-8b1255251" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><span>LinkedIn</span></a>
+    </div>
+  </section>
+
+  <footer><span>David Rodríguez · Coslada, Madrid</span><span>hecho a mano con HTML y CSS</span></footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var label=btn.querySelector('span'),orig=label.textContent,val=btn.getAttribute('data-copy');
+    function ok(){label.textContent='Copiado';btn.classList.add('done');setTimeout(function(){label.textContent=orig;btn.classList.remove('done')},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(label);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(val).then(ok,fallback)}catch(e){fallback()}
+  });
+});
+</script>
+</body>
+</html>
